@@ -3,6 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/java-nio-review.iml" filepath="$PROJECT_DIR$/.idea/java-nio-review.iml" />
+      <module fileurl="file://$PROJECT_DIR$/nio-buffer/nio-buffer.iml" filepath="$PROJECT_DIR$/nio-buffer/nio-buffer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/nio-channel/nio-channel.iml" filepath="$PROJECT_DIR$/nio-channel/nio-channel.iml" />
+      <module fileurl="file://$PROJECT_DIR$/nio-composite/nio-composite.iml" filepath="$PROJECT_DIR$/nio-composite/nio-composite.iml" />
     </modules>
   </component>
 </project>
