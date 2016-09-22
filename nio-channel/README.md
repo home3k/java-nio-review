@@ -12,3 +12,4 @@ channel用于在字节缓冲区和位于channel另一侧的尸体之间进行有
 ```
 
 InterruptibleChannel: 可被终端的channel,
+
