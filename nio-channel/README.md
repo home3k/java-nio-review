@@ -13,3 +13,12 @@ channel用于在字节缓冲区和位于channel另一侧的尸体之间进行有
 
 InterruptibleChannel: 可被终端的channel,
 
+
+FileChannel，文件通道总是阻塞的，不能设置为非阻塞。异步IO，是操作系统的高级特性。
+
+文件空洞 file hole 磁盘上一个文件分配空间小于他的文件大小。 大多数现代文件系统只为实际写入的数据分配磁盘空间。
+
+
+
+
+
