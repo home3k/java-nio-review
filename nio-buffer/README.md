@@ -1,10 +1,12 @@
 # Buffer
 
-Buffer相关的class非常多，最开始也一头雾水，所以首先对其命名进行简单梳理
+最开始看`java.nioBuffer`包，相关的class非常多，一头雾水，所以还是先对其命名进行简单梳理。
 
 #### 命名
 
-**[MS][T]Buffer[AM][BO]**
+所有的命名均遵循如下的基本原则。
+
+**\[MS\]\[T\]Buffer\[AM\]\[BO\]**
 
 - MS - memory scheme: Heap or Direct.
 - T - type: int, short, float, double, char or byte.
@@ -12,7 +14,7 @@ Buffer相关的class非常多，最开始也一头雾水，所以首先对其命
 - BO - byte ordering: S - non-native, U - native.
 - B - BigEndian or L - LittleEndian.
 
-classes whose names dont include R, by default are W - writable.
+Classes whose names dont include R, by default are W - writable.
 
 所以基本所有的buffer基本都是：
 
@@ -82,19 +84,35 @@ DirectCharBufferU
 
 #### Buffer基础
 
-0 <= mark <= position <= limit <= capacity.
+其实就是一个方便读写操作的数据结构，定义了一些属性，方便操作。
 
-其实就是一个方便读写操作的数据结构.
+`0 <= mark <= position <= limit <= capacity`
 
-flip() clear() rewind() 三个对position, limit的操作
+其中flip() clear() rewind() 三个对position, limit的操作
 
-flip: limit=position, position。 基本就是读写切换，进行read操作(from buffer)
-clear: position=0, limit=capacity。开启一个新的write(for buffer)
-rewind: position=0。 重新进行read。
+- flip: limit=position, position。 基本就是读写切换，进行read操作(from buffer)
+- clear: position=0, limit=capacity。开启一个新的write(for buffer)
+- rewind: position=0。 重新进行read。
 
 mark默认-1, undefined.  mark()操作使得mark=position, reset() 使得 position=mark
 
-可以是readonly, 非thread safety.
+同事Buffer可以是readonly
 
-支持invocation chaining
+它是非thread safety的，特殊情况下，使用需要特别小心。
+
+同时它是支持invocation chaining,
+
+`buffer.flip().position(5).limit(100)`
+
+
+
+非boolean类型的所有基本类型都有一个对应的buffer。
+
+
+
+
+
+
+
+
 
