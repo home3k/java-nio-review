@@ -17,6 +17,7 @@
         <module>nio-buffer</module>
         <module>nio-channel</module>
         <module>nio-composite</module>
+        <module>nio-selector</module>
     </modules>
 
     <dependencyManagement>
